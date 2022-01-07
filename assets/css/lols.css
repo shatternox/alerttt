@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: none;
+}
+
+.lol1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/images/lol1.jpg');
+    background-size: 100%;
+    animation: rotation 0.1s infinite linear;
+    z-index: -90;
+}
+
+.lol1-1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/images/lol1.jpg');
+    background-size: 200%;
+    animation: rotation 0.2s infinite alternate-reverse;
+    z-index: -100;
+}
+
+.lol1-2{
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: url('/public/images/lol1.jpg');
+    background-size: 300%;
+    animation: rotation 0.4s infinite alternate-reverse;
+    z-index: -110;
+}
+
+.lol1-3{
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background-image: url('/public/images/lol1.jpg');
+    background-size: 400%;
+    animation: rotation 0.8s infinite alternate-reverse;
+    z-index: -120;
+}
+
+.lol1-4{
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    background-image: url('/public/images/lol1.jpg');
+    background-size: 500%;
+    animation: rotation 1.2s infinite alternate-reverse;
+    z-index: -130;
+}
+
+marquee{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    animation: color-change 0.3s infinite;
+}
+
+  
+@keyframes color-change {
+    0% { color: red; }
+    10% { color: rgb(255, 146, 4); }
+    20% { color: rgb(255, 251, 0); }
+    30% { color: rgb(70, 186, 63); }
+    40% { color: rgb(7, 2, 2); }
+    50% { color: rgb(199, 24, 24); }
+    60% { color: rgb(12, 38, 181); }
+    70% { color: white; }
+    80% { color: rgb(212, 255, 20); }
+    90% { color: rgb(56, 5, 5); }
+    100% { color: rgb(32, 7, 68); }
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
