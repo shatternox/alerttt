@@ -8,8 +8,53 @@ html,body{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    cursor: none;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: brown;
+}
 
+.images{
+    display: flex;
+    justify-content: center;
+}
 
+img{
+    margin: 50px;
+    width: 200px;
+}
+
+form{
+    margin-bottom: 30px;
+}
+
+.message{
+    text-align: center;
+    font-size: 30px;
+}
+
+.warning{
+    color: white;
+    font-size: 20px;
+}
+
+.alert{
+    color: yellow;
+    animation: color-change 0.3s infinite;
+}
+
+@keyframes color-change {
+    0% { color: rgb(99, 12, 12); }
+    33% { color: rgba(191, 245, 41, 0.809); }
+    100% { color: rgb(41, 41, 8); }
+}
+
+#puzzle{
+    font-weight: bold;
+    color: salmon;
+    font-size: 20px;
+}

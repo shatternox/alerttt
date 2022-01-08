@@ -18,15 +18,15 @@ app.use('/public/audio', express.static('./assets/audio'))
 
 
 app.get('/', (req, res) => {
-    res.render('level1')
+    res.redirect('/level1')
 })
 
 app.get('/home', (req, res) => {
-    res.render('level1')
+    res.redirect('/level1')
 })
 
 app.get('/index', (req, res) => {
-    res.render('level1')
+    res.redirect('/level1')
 })
 
 app.get('/level1', (req, res) => {

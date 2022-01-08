@@ -18,18 +18,35 @@ body
     audio(autoplay loop id="playAudio")
         source(src="/public/audio/ALERT.mp3") 
 
-    form
-        input(type="text")
-        button(type="submit")="SUBMIT"
-        
-    div 
-        img(src="/public/images/char-1.png", alt="")
-        img(src="/public/images/char-1.png", alt="")
-        img(src="/public/images/char-1.png", alt="")
-        
 
-script(src="/public/js/level1.js")
+    div
+        p(id="puzzle")
+    
+
+    div(class="images")
+        img(src="/public/images/alert.png", alt="")
+        img(src="/public/images/alert.png", alt="")
+        img(src="/public/images/alert.png", alt="")
+
+    form
+        input(type="text" id="payload")
+        button(type="button" class="btn btn-warning" id="submit")="SUBMIT"
+
+    div(class="message")
+        strong(class="alert")="ALERT!"
+        strong=" YOU ARE TRAPPED IN THIS ROOM."
+        br
+        strong="THERE ARE THREE PUZZLE YOU NEED TO SOLVE TO GET THE KEY TO ESCAPE"
+        br
+        strong(class="warning")
+            i="WARNING! DON'T TRY TO CHEAT, YOU WILL REGRET IT!"
+        br
+        strong(class="warning")
+            i="CHANGING URL WILL NOT WORK, DON'T TRY IT." 
+        strong(class="alert")=" YOU HAVE BEEN WARNED!"
+
 script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous") 
+script(src="/public/js/level1.js")
 
 
 
