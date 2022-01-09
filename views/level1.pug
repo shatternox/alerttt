@@ -19,6 +19,11 @@ body
         source(src="/public/audio/ALERT.mp3") 
 
 
+    if pass === 1
+        b(id="flag")="Flag 1: PETIR{r3fl3cted_}"
+        a(href="/0xdc95937f687f74f8a8a33bb79f5676914ef4b6f2" id="next-level")="Click here to go to level 2!"
+
+
     div
         p(id="puzzle")
     
@@ -28,9 +33,11 @@ body
         img(src="/public/images/alert.png", alt="")
         img(src="/public/images/alert.png", alt="")
 
-    form
-        input(type="text" id="payload")
-        button(type="button" class="btn btn-warning" id="submit")="SUBMIT"
+    form(method="POST" id="payload-form")
+        input(type="text" id="payload" name="payload")
+        button(type="submit" class="btn btn-warning" id="submit")="SUBMIT"
+
+    button(class="btn btn-info hint" id="hint")="Objective"
 
     div(class="message")
         strong(class="alert")="ALERT!"
@@ -45,7 +52,7 @@ body
             i="CHANGING URL WILL NOT WORK, DON'T TRY IT." 
         strong(class="alert")=" YOU HAVE BEEN WARNED!"
 
-script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous") 
+script(src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous") 
 script(src="/public/js/level1.js")
 
 

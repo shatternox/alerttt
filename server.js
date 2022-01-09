@@ -7,6 +7,7 @@ const HOST = '0.0.0.0'
 
 const app = express()
 const path = require('path')
+const bodyParser = require('body-parser')
 
 app.set('view engine', 'pug')
 
@@ -15,7 +16,7 @@ app.use('/public/images', express.static('./assets/images'))
 app.use('/public/js', express.static('./assets/js'))
 app.use('/public/css', express.static('./assets/css'))
 app.use('/public/audio', express.static('./assets/audio'))
-
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.redirect('/level1')
@@ -30,8 +31,27 @@ app.get('/index', (req, res) => {
 })
 
 app.get('/level1', (req, res) => {
-    res.render('level1')
+    res.render('level1', {pass : 0})
 })
+
+app.post('/level1', (req, res) => {
+
+    answer = req.body.payload
+    pass = 0
+
+    if(answer.includes("<script>")){
+        if(answer.includes("</script>")){
+            if(answer.includes("alert(1)")){
+                pass = 1
+            }
+        }
+    }
+
+    
+    res.render('level1', {payload: answer, pass: pass})
+})
+
+
 
 app.get('/0xdc95937f687f74f8a8a33bb79f5676914ef4b6f2', (req, res) => {
     res.render('level2')

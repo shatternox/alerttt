@@ -47,14 +47,35 @@ form{
     animation: color-change 0.3s infinite;
 }
 
+#puzzle{
+    font-weight: bold;
+    color: salmon;
+    font-size: 20px;
+}
+
+.hint{
+    margin-bottom: 20px;
+}
+
+#hint-text{
+    font-size: 20px;
+    padding: 20px 0;
+    color: white;
+}
+
+#flag{
+    animation: color-change 0.3s infinite;
+    font-size: 20px;
+}
+
+#next-level{
+    padding: 5px;
+    color: white;
+}
+
 @keyframes color-change {
     0% { color: rgb(99, 12, 12); }
     33% { color: rgba(191, 245, 41, 0.809); }
     100% { color: rgb(41, 41, 8); }
 }
 
-#puzzle{
-    font-weight: bold;
-    color: salmon;
-    font-size: 20px;
-}
