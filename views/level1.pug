@@ -1,13 +1,4 @@
-doctype html
-head(lang="en")
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title="Level 1"
-    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
-    integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
-    
-    link(rel="stylesheet", href="/public/css/levels.css")
+include header.pug
     
         
 
@@ -30,8 +21,6 @@ body
 
     div(class="images")
         img(src="/public/images/alert.png", alt="")
-        img(src="/public/images/alert.png", alt="")
-        img(src="/public/images/alert.png", alt="")
 
     form(method="POST" id="payload-form")
         input(type="text" id="payload" name="payload")
@@ -43,7 +32,7 @@ body
         strong(class="alert")="ALERT!"
         strong=" YOU ARE TRAPPED IN THIS ROOM."
         br
-        strong="THERE ARE THREE PUZZLE YOU NEED TO SOLVE TO GET THE KEY TO ESCAPE"
+        strong="THERE ARE THREE OBJECTIVE YOU NEED TO SOLVE TO GET THE KEY TO ESCAPE"
         br
         strong(class="warning")
             i="WARNING! DON'T TRY TO CHEAT, YOU WILL REGRET IT!"

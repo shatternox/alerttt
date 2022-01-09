@@ -31,7 +31,7 @@ app.get('/index', (req, res) => {
 })
 
 app.get('/level1', (req, res) => {
-    res.render('level1', {pass : 0})
+    res.render('level1', {pass : 0, title:"Alerttt - Level 1"})
 })
 
 app.post('/level1', (req, res) => {
@@ -48,18 +48,34 @@ app.post('/level1', (req, res) => {
     }
 
     
-    res.render('level1', {payload: answer, pass: pass})
+    res.render('level1', {pass: pass})
 })
-
 
 
 app.get('/0xdc95937f687f74f8a8a33bb79f5676914ef4b6f2', (req, res) => {
-    res.render('level2')
+    res.render('level2', {pass : 0, title:"Alerttt - Level 2"})
 })
 
-app.get('/0x5775e60447a0bc86c67c61472476ebf6fcab0d87', (req, res) => {
-    res.render('level3')
+
+app.post('/0xdc95937f687f74f8a8a33bb79f5676914ef4b6f2', (req, res) => {
+
+    answer = req.body.payload
+    pass = 0
+
+    
+
+    res.render('level2', {pass : pass})
 })
+
+
+
+app.get('/0x5775e60447a0bc86c67c61472476ebf6fcab0d87', (req, res) => {
+    res.render('level3', {title:"Alerttt - Level 3"})
+})
+
+
+
+
 
 app.get('/level2', (req, res) => {
     res.render('lol')

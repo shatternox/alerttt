@@ -1,12 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+include header.pug
     
-</body>
-</html>
+        
+
+body
+
+    iframe(src="/public/audio/ALERT.mp3" allow="autoplay" style="display:none" id="iframeAudio") 
+
+    audio(autoplay loop id="playAudio")
+        source(src="/public/audio/ALERT.mp3") 
+
+
+    if pass === 1
+        b(id="flag")="Flag 2: PETIR{r3fl3cted_}"
+        a(href="/0xdc95937f687f74f8a8a33bb79f5676914ef4b6f2" id="next-level")="Click here to go to level 2!"
+
+
+    div
+        p(id="puzzle")
+    
+
+    div(class="images")
+        img(src="/public/images/alert.png", alt="")
+        img(src="/public/images/alert.png", alt="")
+
+    form(method="POST" id="payload-form")
+        input(type="text" id="payload" name="payload")
+        button(type="submit" class="btn btn-warning" id="submit")="SUBMIT"
+
+    button(class="btn btn-info hint" id="hint")="Objective"
+
+    div(class="message")
+        strong="CONGRATS! YOU GOT INTO LEVEL 2. HURRY, CLICK THE BUTTON TO VIEW THE OBJECTIVE"
+        br
+    
+
+script(src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous") 
+script(src="/public/js/level2.js")
+
+
+
+
+
+
+
+
+
+
+
+
+    
