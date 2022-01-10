@@ -34,7 +34,7 @@ $(function(){
 
         $('.message').html('')
 
-        let hint = $('<marquee>').attr('id', 'hint-text').attr('scrollamount', '10').text("For level 1 you need to use a script tag to pop up an alert with 1 as the message!")
+        let hint = $('<marquee>').attr('id', 'hint-text').attr('scrollamount', '10').text("For level 3 you cannot use a script tag anymore! Hm.. I was thinking about event")
 
         $('.message').append(hint)
 
