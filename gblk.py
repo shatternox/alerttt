@@ -1,5 +1,5 @@
 import os
 
 
-command = input("Masukkan command: ")
+command = "dir"
 os.system(command)
