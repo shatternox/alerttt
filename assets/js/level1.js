@@ -8,13 +8,6 @@ $(function(){
     }
 
 
-    $('#submit').on('click',() =>{
-
-        var payload = $('#payload').val()
-
-        $('#puzzle').html(payload)
-    })
-
     $('#payloadForm').submit( (e) => {
         e.preventDefault();
         // let payload = new FormData(this)

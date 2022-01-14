@@ -34,7 +34,7 @@ $(function(){
 
         $('.message').html('')
 
-        let hint = $('<marquee>').attr('id', 'hint-text').attr('scrollamount', '10').text("For level 3 you cannot use a script tag anymore! Hm.. I was thinking about event")
+        let hint = $('<marquee>').attr('id', 'hint-text').attr('scrollamount', '10').text("Objective are still the same! But you cannot use the script tag anymore! Btw, are you enjoying this CTF event?")
 
         $('.message').append(hint)
 

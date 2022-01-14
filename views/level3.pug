@@ -10,17 +10,20 @@ body
 
 
     if pass === 1
-        b(id="flag")="Flag 2: PETIR{r3fl3cted_}"
-        a(href="/0xdc95937f687f74f8a8a33bb79f5676914ef4b6f2" id="next-level")="Click here to go to level 2!"
+        script="alert(1)"
+        b(id="flag")="Flag 3: PETIR{l1k34b0ss_694205256832}"
+        b(id="win")="T"
 
 
     div
-        p(id="puzzle")
+        p(id="puzzle")=answer
     
 
     div(class="images")
         img(src="/public/images/alert.png", alt="")
         img(src="/public/images/alert.png", alt="")
+        img(src="/public/images/alert.png", alt="")
+
 
     form(method="POST" id="payload-form")
         input(type="text" id="payload" name="payload")
