@@ -83,6 +83,29 @@ app.get('/0x5775e60447a0bc86c67c61472476ebf6fcab0d87', (req, res) => {
 })
 
 
+app.post('/0x5775e60447a0bc86c67c61472476ebf6fcab0d87', (req, res) => {
+
+    answer = req.body.payload
+    pass = 0
+
+    if(!(answer.includes("<script>"))){
+        if(answer.includes("<") && answer.includes(">")){
+            if(answer.includes("</") || answer.includes("/>")){
+            
+                if(answer.includes("onafterprint=") || answer.includes("onbeforeprint=") || answer.includes("onbeforeunload=")|| answer.includes("onerror=")|| answer.includes("onresize=")|| answer.includes("onload=")|| answer.includes("onpagehide=")|| answer.includes("onoffline=")|| answer.includes("onmousedown=")|| answer.includes("onclick=")|| answer.includes("onmousemove=")|| answer.includes("onmouseout=")|| answer.includes("onmouseover=")|| answer.includes("onmouseup=")|| answer.includes("onwheel=")|| answer.includes("onscroll=")){
+
+                    if(answer.includes("alert(1)") || answer.includes("alert('1')")|| answer.includes('alert("1")')){
+                        pass = 1
+                    }
+
+                }
+            }
+            
+        }
+    }
+
+    res.render('level3', {pass:pass, answer:answer})
+})
 
 
 

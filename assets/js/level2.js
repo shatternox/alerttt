@@ -7,6 +7,13 @@ $(function(){
         $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
     }
 
+    // $('#submit').on('click',() =>{
+
+    //     var payload = $('#payload').val()
+
+    //     $('#puzzle').html(payload)
+    // })
+
 
     $('#payloadForm').submit( (e) => {
         e.preventDefault();

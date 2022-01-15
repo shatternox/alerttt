@@ -8,12 +8,12 @@ $(function(){
     }
 
 
-    $('#submit').on('click',() =>{
+    // $('#submit').on('click',() =>{
 
-        var payload = $('#payload').val()
+    //     var payload = $('#payload').val()
 
-        $('#puzzle').html(payload)
-    })
+    //     $('#puzzle').html(payload)
+    // })
 
     $('#payloadForm').submit( (e) => {
         e.preventDefault();
